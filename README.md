@@ -15,3 +15,7 @@ entrar no diretorio root da aplicação e digitar o seguinte comando:
 mvn tomcat7:deploy -Dbaseurl=<ip do servidor + porta> -Didserver=<id_do_server> -Duser=<_usuario> -Dpass=<_senha>
 
 id do server, usuario e senha devem ser os mesmo do arquivo settings do maven
+
+o endPoint "gerarSenha" é publico, não existe necessidade de um token para autorização(implementado através de um JWTFilter)
+
+no endpoint "logar" é gerado um token para ser usado nas fundionalidades de chamar e reinciar senha.
